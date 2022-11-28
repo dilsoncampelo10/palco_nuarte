@@ -69,7 +69,7 @@
                                 </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('login')}}">Login</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Cadastre-se</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('register')}}">Cadastre-se</a>
                                 </li>
                                 <li class="rd-nav-item {{request ()-> routeIs ('contact') ? 'active' : '' }}"><a class="rd-nav-link" href="contact-us.html">Fale conosco</a>
                                 </li>

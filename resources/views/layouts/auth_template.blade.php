@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="{{asset('assets/css/fonts.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <style>
+        body{
+            background-color: #212121;
+        }
         .ie-panel {
             display: none;
             background: #212121;

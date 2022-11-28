@@ -87,15 +87,15 @@
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="tabs-7-1">
                                 <p>O Núcleo de Arte do campus Ipanguaçu faz parte da política ampliada do IFRN que promover reunir e contribuir para o rumo artístico e cultural, além disso os alunos que integram na educação profissional e técnica, promove atividades que possa contribuir significativamente para a comunidade local. </p>
-                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
                             </div>
                             <div class="tab-pane fade" id="tabs-7-2">
                                 <p>Um dos principais objetivos divulgar e estimular a interação e a cooperação entre a arte e o meio urbano e utilizar atividades que envolvam diferentes linguagens artísticas para promover, discutir e expandir as atividades artísticas e culturais.</p>
-                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
                             </div>
                             <div class="tab-pane fade" id="tabs-7-3">
                                 <p>Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for every travel service available in the industry.</p>
-                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Read More</a></div>
+                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
                             </div>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
 <!-- Hot tours-->
 <section class="section section-sm bg-default">
     <div class="container">
-        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Nóticias Recentes</span></h3>
+        <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Notícias Recentes</span></h3>
         <div class="row row-sm row-40 row-md-50">
             <div class="col-sm-6 col-md-12 wow fadeInRight">
                 <!-- Product Big-->
@@ -207,7 +207,7 @@
                                 <div class="group-sm group-middle justify-content-start">
                                     <div class="product-big-rating"></div><a class="product-big-reviews" href="#">Caros alunos e servidores do Campus Ipanguaçu 💖 @ifrn_ipan!! Venham participar do segundo evento CONVERSA ENTRE ARTISTAS!!!
 
-                                        Os nossos convidados dessa vez são os alunos do nosso IFRN-Campus Ipanguaçu e também artistas do Vale, Daniel Alves e Ricardo Melo. Vamos conversar e discutir variados assuntos. 🌹 O evento será na Sala de Música do Campus Ipanguaçu, AMANHÃ às 11:00 da manhã!!!!</a><a class="button button-black-outline button-ujarak" href="#">Acessar Nóticia</a>
+                                        Os nossos convidados dessa vez são os alunos do nosso IFRN-Campus Ipanguaçu e também artistas do Vale, Daniel Alves e Ricardo Melo. Vamos conversar e discutir variados assuntos. 🌹 O evento será na Sala de Música do Campus Ipanguaçu, AMANHÃ às 11:00 da manhã!!!!</a><a class="button button-black-outline button-ujarak" href="#">Acessar Notícia</a>
                                 </div>
 
 
@@ -230,7 +230,7 @@
 
                                     Já compartilha esse evento único de troca mutua de sabedoria, aguardamos todos você para partilhar esse momento incrível!
 
-                                    A transmissão será neste link: https://www.youtube.com/watch?v=drBu0hzR50c</p><a class="button button-black-outline button-ujarak" href="#">Acessar Nóticia</a>
+                                    A transmissão será neste link: https://www.youtube.com/watch?v=drBu0hzR50c</p><a class="button button-black-outline button-ujarak" href="#">Acessar Notícia</a>
 
                             </div>
                         </div>

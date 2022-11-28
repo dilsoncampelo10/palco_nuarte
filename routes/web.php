@@ -16,4 +16,9 @@ Route::get('/poesias', [PoetryController::class, 'show'])->name('poetry');
 
 Route::get('/artistas', [ArtistController::class, 'show'])->name('artist');
 
-Route::get('/login', [LoginController::class, 'index'])->name('login');
+Route::get('/login', [LoginController::class, 'login'])->name('login');
+
+Route::get('/cadastro', [LoginController::class, 'register'])->name('register');
+
+Route::post('/cadastro', [LoginController::class, 'signup'])->name('signup');
+//ADMIN
