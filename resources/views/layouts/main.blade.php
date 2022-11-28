@@ -59,15 +59,19 @@
                             </ul>
                             <!-- RD Navbar Nav-->
                             <ul class="rd-navbar-nav">
-                                <li class="rd-nav-item active"><a class="rd-nav-link" href="{{route('home')}}">Palco Nuarte</a>
+                                <li class="rd-nav-item {{ request ()-> routeIs ('home') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('home')}}">Palco Nuarte</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('notice')}}">Nóticias</a>
+                                <li class="rd-nav-item {{ request ()-> routeIs ('notice') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('notice')}}">Nóticias</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('poetry')}}">Poesias</a>
+                                <li class="rd-nav-item {{request ()-> routeIs ('poetry') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('poetry')}}">Poesias</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="about.html">Artistas</a>
+                                <li class="rd-nav-item {{request ()-> routeIs ('artist') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('artist')}}">Artistas</a>
                                 </li>
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Contact Us</a>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('login')}}">Login</a>
+                                </li>
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="contact-us.html">Cadastre-se</a>
+                                </li>
+                                <li class="rd-nav-item {{request ()-> routeIs ('contact') ? 'active' : '' }}"><a class="rd-nav-link" href="contact-us.html">Fale conosco</a>
                                 </li>
                             </ul>
                         </div>
