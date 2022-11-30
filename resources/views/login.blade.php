@@ -4,7 +4,8 @@
 
 @section('content')
 <div class="container ">
-    <form class="rd-form rd-form-variant-2 rd-mailform" data-form-output="form-output-global" method="post" action="">
+    <form class="rd-form rd-form-variant-2 rd-mailform" data-form-output="form-output-global" method="post" action="{{route('signin')}}">
+        @csrf
         <div class="row row-14 gutters-14">
             <div class="col-md-4">
                 <div class="form-wrap">

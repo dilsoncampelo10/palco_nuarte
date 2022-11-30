@@ -18,7 +18,12 @@ Route::get('/artistas', [ArtistController::class, 'show'])->name('artist');
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 
+Route::post('/login', [LoginController::class, 'authenticate'])->name('signin');
+
 Route::get('/cadastro', [LoginController::class, 'register'])->name('register');
 
 Route::post('/cadastro', [LoginController::class, 'signup'])->name('signup');
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
 //ADMIN

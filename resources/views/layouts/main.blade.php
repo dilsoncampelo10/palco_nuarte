@@ -55,7 +55,7 @@
                                 <li><a class="icon fa fa-facebook" href="#"></a></li>
                                 <li><a class="icon fa fa-twitter" href="#"></a></li>
                                 <li><a class="icon fa fa-google-plus" href="#"></a></li>
-                                <li><a class="icon fa fa-instagram" href="#"></a></li>
+                                <li><a class="icon fa fa-instagram" href="https://www.instagram.com/nuarteip/" target="_blank"></a></li>
                             </ul>
                             <!-- RD Navbar Nav-->
                             <ul class="rd-navbar-nav">
@@ -67,10 +67,16 @@
                                 </li>
                                 <li class="rd-nav-item {{request ()-> routeIs ('artist') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('artist')}}">Artistas</a>
                                 </li>
+                                @guest
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('login')}}">Login</a>
                                 </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('register')}}">Cadastre-se</a>
                                 </li>
+                                @endguest
+                                @auth
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('logout')}}">Sair</a>
+                                </li>
+                                @endauth
                                 <li class="rd-nav-item {{request ()-> routeIs ('contact') ? 'active' : '' }}"><a class="rd-nav-link" href="contact-us.html">Fale conosco</a>
                                 </li>
                             </ul>
@@ -102,7 +108,7 @@
                                     <li>
                                         <div class="unit">
                                             <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
-                                            <div class="unit-body"><a class="link-aemail" href="mailto:#">nuarteip.ifrn.edu.br</a></div>
+                                            <div class="unit-body"><a class="link-aemail" href="mailto:nuarteip.ifrn.edu.br">nuarteip.ifrn.edu.br</a></div>
                                         </div>
                                     </li>
                                     <li>
