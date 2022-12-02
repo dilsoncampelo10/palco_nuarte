@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
@@ -30,3 +31,5 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/project', [ProjectController::class, 'index'])->name('project');
 
 //ADMIN
+
+Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard')->middleware('admin');
