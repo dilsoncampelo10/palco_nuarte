@@ -74,6 +74,8 @@
                                 </li>
                                 @endguest
                                 @auth
+                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('project')}}">Enviar projeto</a>
+                                </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('logout')}}">Sair</a>
                                 </li>
                                 @endauth
