@@ -65,8 +65,12 @@
         </div> -->
         </div>
     </nav>
-
-
+    @if(session('flash'))
+    <div class="alert alert-primary alert-dismissible fade show container" role="alert">
+        {{session('flash')}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
 
     @yield('content')
 

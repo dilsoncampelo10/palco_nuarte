@@ -37,5 +37,6 @@ Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('dashboa
 Route::get('/admin/noticia', [AdminController::class, 'notice'])->name('admin.notice')->middleware('admin');
 
 Route::get('/admin/artista', [AdminController::class, 'artist'])->name('admin.artist')->middleware('admin');
+Route::post('/admin/artista', [ArtistController::class, 'store'])->name('insert.artist');
 
 Route::get('/admin/galeria', [AdminController::class, 'gallery'])->name('admin.gallery')->middleware('admin');

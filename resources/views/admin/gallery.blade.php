@@ -8,6 +8,9 @@
         <div class="col-3">
             @include('components.sidebar')
         </div>
+        <div class="col-9">
+            <form action="" method="post" enctype="multipart/form-data"></form>
+        </div>
     </div>
 </div>
 @endsection
