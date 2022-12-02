@@ -2,14 +2,14 @@
 @section('title','Poesias')
 
 @section('content')
-<section class="breadcrumbs-custom-inset">
+<section class="breadcrumbs-custom-inset mb-5">
     <div class="breadcrumbs-custom context-dark bg-overlay-60">
 
-        <div class="box-position" style="background-image: url(assets/images/ARTISTASLOGO.png);"></div>
+        <div class="box-position " style="background-image: url(assets/images/ARTISTASLOGO.png);"></div>
     </div>
 </section>
 
-<section class="section section-lg section-top-1 bg-gray-4">
+<section class="section section-lg section-top-1 bg-gray-4 ">
     <div class="container offset-negative-1">
         <div class="box-categories cta-box-wrap">
             <div class="box-categories-content">

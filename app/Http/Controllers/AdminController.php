@@ -10,4 +10,17 @@ class AdminController extends Controller
     {
         return view('admin.dashboard');
     }
+
+    public function notice()
+    {
+        return view('admin.notice');
+    }
+    public function artist()
+    {
+        return view('admin.artist');
+    }
+    public function gallery()
+    {
+        return view('admin.gallery');
+    }
 }

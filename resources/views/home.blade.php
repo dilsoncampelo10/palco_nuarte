@@ -2,7 +2,7 @@
 @section('title','Home')
 @section('content')
 
-<section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
+<section class="section swiper-container swiper-slider swiper-slider-corporate swiper-pagination-style-2 mb-5" data-loop="true" data-autoplay="5000" data-simulate-touch="true" data-nav="false" data-direction="vertical">
     <div class="swiper-wrapper text-left">
         <div class="swiper-slide context-dark" data-slide-bg="{{asset('assets/images/100.png')}}">
             <div class="swiper-slide-caption section-md">

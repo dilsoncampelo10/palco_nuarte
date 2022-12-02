@@ -32,4 +32,10 @@ Route::get('/project', [ProjectController::class, 'index'])->name('project');
 
 //ADMIN
 
-Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard')->middleware('admin');
+Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('dashboard')->middleware('admin');
+
+Route::get('/admin/noticia', [AdminController::class, 'notice'])->name('admin.notice')->middleware('admin');
+
+Route::get('/admin/artista', [AdminController::class, 'artist'])->name('admin.artist')->middleware('admin');
+
+Route::get('/admin/galeria', [AdminController::class, 'gallery'])->name('admin.gallery')->middleware('admin');
