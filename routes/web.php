@@ -49,3 +49,4 @@ Route::get('/admin/galeria', [AdminController::class, 'gallery'])->name('admin.g
 Route::get('/admin/projeto', [AdminController::class, 'project'])->name('admin.project')->middleware('admin');
 
 Route::delete('/admin/projeto/{id}', [ProjectController::class, 'destroy'])->name('delete.project');
+Route::put('/admin/projeto/{id}', [ProjectController::class, 'update'])->name('update.project');

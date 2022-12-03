@@ -6,6 +6,7 @@ use App\Models\Category;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class ProjectController extends Controller
 {
@@ -54,6 +55,15 @@ class ProjectController extends Controller
             return redirect()->route('dashboard')->with('flash', 'Categoria adicionada');
         }
         return redirect()->route('dashboard')->with('flash', 'Não foi possível adicionar categoria');
+    }
+
+
+    //Atualiza situação do projeto para 0, não estando mais pendente
+    public function update($id)
+    {
+        DB::table('projects')->where('id', $id)->update(['isPending' => 0]);
+
+        return redirect()->route('admin.project')->with('flash', 'Projeto aceito com sucesso !');
     }
 
     public function destroy($id)

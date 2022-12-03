@@ -22,8 +22,10 @@
                         <i class="fa-solid fa-circle-info"></i> Ver mais
                     </button>
 
-                    <form action="" style="display: inline;">
-                        <button class="btn btn-success" type="submit">
+                    <form action="{{route('update.project',['id'=>$project->id])}}" style="display: inline;" method="POST">
+                        @csrf
+                        @method('PUT')
+                        <button class="btn btn-success" type="submit" onclick="return confirm('Tem certeza que deseja aceitar esse projeto?')">
                             <i class="fa-solid fa-check"></i> Confirmar
                         </button>
                     </form>
