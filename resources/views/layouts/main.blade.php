@@ -10,6 +10,7 @@
     <title>@yield('title')</title>
     <!-- CSS-->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:400,500,600,700%7CPoppins:400%7CTeko:300,400">
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/bootstrap.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/fonts.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
@@ -74,7 +75,7 @@
                                 </li>
                                 @endguest
                                 @auth
-                                <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('project')}}">Enviar projeto</a>
+                                <li class="rd-nav-item {{ request ()-> routeIs ('project') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('project')}}">Enviar projeto</a>
                                 </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('logout')}}">Sair</a>
                                 </li>
@@ -88,6 +89,13 @@
             </nav>
         </div>
     </header>
+    @if(session('flash'))
+    <div class="alert alert-primary alert-dismissible fade show container" role="alert">
+        {{session('flash')}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    @endif
+
     @yield('content')
 
 
@@ -129,6 +137,7 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
+    <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('assets/js/core.min.js')}}"></script>
     <script src="{{asset('assets/js/script.js')}}"></script>
 </body>

@@ -28,7 +28,9 @@ Route::post('/cadastro', [LoginController::class, 'signup'])->name('signup');
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/project', [ProjectController::class, 'index'])->name('project');
+Route::get('/projeto', [ProjectController::class, 'index'])->name('project')->middleware('auth');
+
+Route::post('/projeto', [ProjectController::class, 'store'])->name('insert.project');
 
 //ADMIN
 
