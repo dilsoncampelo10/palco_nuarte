@@ -47,3 +47,5 @@ Route::post('/admin/artista', [ArtistController::class, 'store'])->name('insert.
 Route::get('/admin/galeria', [AdminController::class, 'gallery'])->name('admin.gallery')->middleware('admin');
 
 Route::get('/admin/projeto', [AdminController::class, 'project'])->name('admin.project')->middleware('admin');
+
+Route::delete('/admin/projeto/{id}', [ProjectController::class, 'destroy'])->name('delete.project');

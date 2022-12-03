@@ -55,4 +55,11 @@ class ProjectController extends Controller
         }
         return redirect()->route('dashboard')->with('flash', 'Não foi possível adicionar categoria');
     }
+
+    public function destroy($id)
+    {
+        Project::findOrFail($id)->delete();
+
+        return redirect()->route('admin.project')->with('flash', 'Projeto recusado!');
+    }
 }
