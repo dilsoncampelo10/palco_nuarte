@@ -12,7 +12,9 @@
         <label for="file">Arquivo do projeto (Opicional) <i class="fa-sharp fa-solid fa-file"></i></label>
         <select name="" id="" class="form-control">
             <option value="">Selecione categoria do projeto</option>
-            <option value=""></option>
+            @foreach ($categories as $category)
+            <option value="">{{$category->name}}</option>
+            @endforeach
         </select>
         <input type="file" name="file" id="file" class="form-control mb-2">
         <input type="submit" value="Enviar" class="btn btn-primary">
