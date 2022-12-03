@@ -9,6 +9,7 @@
             @include('components.sidebar')
         </div>
         <div class="col-9">
+            <h1 class="text-bg-success mt-2">Artistas</h1>
             <form action="{{route('insert.artist')}}" method="post">
                 @csrf
                 <label for="name" class="form-label">Nome</label>

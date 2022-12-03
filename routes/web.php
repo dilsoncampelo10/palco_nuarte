@@ -35,6 +35,7 @@ Route::get('/project', [ProjectController::class, 'index'])->name('project');
 Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('dashboard')->middleware('admin');
 
 Route::get('/admin/noticia', [AdminController::class, 'notice'])->name('admin.notice')->middleware('admin');
+Route::post('/admin/noticia', [NoticeController::class, 'store'])->name('insert.notice');
 
 Route::get('/admin/artista', [AdminController::class, 'artist'])->name('admin.artist')->middleware('admin');
 Route::post('/admin/artista', [ArtistController::class, 'store'])->name('insert.artist');
