@@ -44,12 +44,26 @@
                     <div class="card text-bg-dark bg-gradient">
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">Projetos pendentes</h5>
-                            <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                            @if ($project >= 1)
+                            <!-- <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
                                 <span class="visually-hidden"></span>
-                            </span>
+                            </span> -->
+
+                            @if ($project<=99) <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                {{$project}}
+
+                                </span>
+                                @else
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    99+
+
+                                </span>
+                                @endif
+
+                                @endif
                         </div>
 
-                        <a href="" class="btn btn-dark mt-3">Visualizar projetos recém enviados</a>
+                        <a href="{{route('admin.project')}}" class="btn btn-dark mt-3">Visualizar projetos recém enviados</a>
                     </div>
                     <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">
                         Adicionar nova categoria

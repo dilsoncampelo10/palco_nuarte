@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,9 +14,13 @@ class AdminController extends Controller
     public function index()
     {
         $loggedUser = User::find(Auth::user()->id);
+        $projectCountPending = Project::where('isPending', 1)->count();
+
         $data = [
-            'loggedUser' => $loggedUser
+            'loggedUser' => $loggedUser,
+            'project' => $projectCountPending
         ];
+       
         return view('admin.dashboard', $data);
     }
 
@@ -25,7 +30,7 @@ class AdminController extends Controller
         $data = [
             'loggedUser' => $loggedUser
         ];
-        return view('admin.notice',$data);
+        return view('admin.notice', $data);
     }
     public function artist()
     {
@@ -33,7 +38,7 @@ class AdminController extends Controller
         $data = [
             'loggedUser' => $loggedUser
         ];
-        return view('admin.artist',$data);
+        return view('admin.artist', $data);
     }
     public function gallery()
     {
@@ -41,6 +46,19 @@ class AdminController extends Controller
         $data = [
             'loggedUser' => $loggedUser
         ];
-        return view('admin.gallery',$data);
+        return view('admin.gallery', $data);
+    }
+
+    public function project()
+    {
+        //Verifica se o projeto está pendente
+        $pendingProjects = Project::where('isPending', 1)->get();
+
+        $loggedUser = User::find(Auth::user()->id);
+        $data = [
+            'loggedUser' => $loggedUser,
+            'pendingProjects' => $pendingProjects
+        ];
+        return view('admin.project', $data);
     }
 }

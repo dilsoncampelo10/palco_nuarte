@@ -45,3 +45,5 @@ Route::get('/admin/artista', [AdminController::class, 'artist'])->name('admin.ar
 Route::post('/admin/artista', [ArtistController::class, 'store'])->name('insert.artist');
 
 Route::get('/admin/galeria', [AdminController::class, 'gallery'])->name('admin.gallery')->middleware('admin');
+
+Route::get('/admin/projeto', [AdminController::class, 'project'])->name('admin.project')->middleware('admin');

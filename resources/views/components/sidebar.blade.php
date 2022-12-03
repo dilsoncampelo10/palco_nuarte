@@ -12,7 +12,7 @@
         <a class="nav-link {{ request ()-> routeIs ('admin.artist') ? 'active' : '' }}" href="{{route('admin.artist')}}"><i class="fa-solid fa-palette"></i> Publicar artista</a>
     </li>
     <li class="nav-item">
-        <a class="nav-link"><i class="fa-solid fa-tarp"></i> Projetos pendentes</a>
+        <a class="nav-link {{ request ()-> routeIs ('admin.project') ? 'active' : '' }}" href="{{route('admin.project')}}"><i class="fa-solid fa-tarp"></i> Projetos pendentes</a>
     </li>
     <li class="nav-item">
         <a class="nav-link" href="{{route('home')}}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sair</a>

@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title','Painel Administrativo')
+@section('title','Adicionar imagem na galeria')
 
 @section('content')
 
