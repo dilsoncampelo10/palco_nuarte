@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProjectController extends Controller
 {
@@ -22,12 +23,17 @@ class ProjectController extends Controller
         $description = $request->description;
         $category = $request->category;
         $file = $request->file;
+        $author = $request->author;
+        $date = $request->date;
 
         if (($category && $title && $description) || ($file && $category)) {
             Project::create([
                 'title' => $title,
                 'description' => $description,
                 'id_category' => $category,
+                'id_user' => Auth::user()->id,
+                'author' => $author,
+                'dateCreation' => $date
                 // 'file' => $request->file
             ]);
 

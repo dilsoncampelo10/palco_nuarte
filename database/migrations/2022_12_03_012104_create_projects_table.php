@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->date('dateCreation')->nullable();
+            $table->string('dateCreation')->nullable();
             $table->string('author');
             $table->foreignId('id_category')->references('id')->on('categories');
             $table->foreignId('id_user')->references('id')->on('users');

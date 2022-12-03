@@ -13,6 +13,10 @@ class Project extends Model
         'title',
         'description',
         'id_category',
+        'id_user',
+        'dateCreation',
+        'author',
+        'isPending',
         'file'
     ];
 }

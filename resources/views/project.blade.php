@@ -18,6 +18,8 @@
             <option value="{{$category->id}}">{{$category->name}}</option>
             @endforeach
         </select>
+        <label for="date">Data de criação</label>
+        <input type="text" name="date" id="fate" placeholder="Digite data de criação (Mês, Ano)" class="form-control">
         <label for="file">Arquivo do projeto (Opicional) <i class="fa-sharp fa-solid fa-file"></i></label>
         <input type="file" name="file" id="file" class="form-control mb-2">
         <input type="submit" value="Enviar" class="btn btn-primary mb-3">
