@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArtistController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NoticeController;
@@ -30,9 +31,9 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/projeto', [ProjectController::class, 'index'])->name('project')->middleware('auth');
 
-Route::get('/contato',function(){
-    return view('mails.contact');
-});
+Route::get('/contato', [ContactController::class, 'index'])->name('contact');
+
+Route::post('/contato',[ContactController::class,'store'])->name('send.email');
 
 Route::post('/projeto', [ProjectController::class, 'store'])->name('insert.project');
 

@@ -59,34 +59,35 @@
                 <p>Ideias e sugestões são muito bem-vindas para o nuarte!</p>
             </div>
         </article>
-        <form class="rd-form rd-form-variant-2 rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
+        <form class="rd-form rd-form-variant-2" data-form-output="form-output-global" data-form-type="contact" method="post" action="{{route('send.email')}}">
+            @csrf
             <div class="row row-14 gutters-14">
                 <div class="col-md-4">
                     <div class="form-wrap">
-                        <input class="form-input" id="contact-your-name-2" type="text" name="name" data-constraints="">
+                        <input class="form-input" id="contact-your-name-2" type="text" name="name">
                         <label class="form-label" for="contact-your-name-2">Nome</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-wrap">
-                        <input class="form-input" id="contact-email-2" type="email" name="email" data-constraints="">
+                        <input class="form-input" id="contact-email-2" type="email" name="email">
                         <label class="form-label" for="contact-email-2">E-mail</label>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-wrap">
-                        <input class="form-input" id="contact-phone-2" type="text" name="phone" data-constraints="">
-                        <label class="form-label" for="contact-phone-2">Assunto</label>
+                        <input class="form-input" id="contact-subject-2" type="text" name="subject">
+                        <label class="form-label" for="contact-subject-2">Assunto</label>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="form-wrap">
                         <label class="form-label" for="contact-message-2">Mensagem</label>
-                        <textarea class="form-input textarea-lg" id="contact-message-2" name="message" data-constraints=""></textarea>
+                        <textarea class="form-input textarea-lg" id="contact-message-2" name="message"></textarea>
                     </div>
                 </div>
             </div>
-            <button class="button button-primary button-pipaluk" type="submit">Enviar mensagem</button>
+            <button class="button button-primary" type="submit">Enviar mensagem</button>
         </form>
     </div>
 </section>

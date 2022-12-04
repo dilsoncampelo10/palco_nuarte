@@ -80,7 +80,7 @@
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('logout')}}">Sair</a>
                                 </li>
                                 @endauth
-                                <li class="rd-nav-item {{request ()-> routeIs ('contact') ? 'active' : '' }}"><a class="rd-nav-link" href="contact-us.html">Fale conosco</a>
+                                <li class="rd-nav-item {{request ()-> routeIs ('contact') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('contact')}}">Fale conosco</a>
                                 </li>
                             </ul>
                         </div>
