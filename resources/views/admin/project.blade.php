@@ -1,8 +1,6 @@
 @extends('layouts.admin')
 @section('title','Projetos pendentes')
-
 @section('content')
-
 <div class="container-fluid">
     <div class="row">
         <div class="col-3">
@@ -14,14 +12,10 @@
                 <div class="card-body">
                     <h5 class="card-title">{{$project->title}}</h5>
                     <p class="card-text"><small>{{$project->dateCreation}} by {{$project->author}}</small></p>
-
                     <p class="card-text text-danger"><small>{{($project->isPending==1?'Projeto pendente':'Projeto aceito')}}</small></p>
-
-
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop{{$project->id}}">
                         <i class="fa-solid fa-circle-info"></i> Ver mais
                     </button>
-
                     <form action="{{route('update.project',['id'=>$project->id])}}" style="display: inline;" method="POST">
                         @csrf
                         @method('PUT')
@@ -35,7 +29,6 @@
                         <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja recusar esse projeto?')">
                             <i class="fa-solid fa-ban"></i> Recusar
                         </button>
-
                     </form>
                 </div>
             </div>
@@ -52,7 +45,6 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
-
                         </div>
                     </div>
                 </div>

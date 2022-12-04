@@ -30,6 +30,10 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/projeto', [ProjectController::class, 'index'])->name('project')->middleware('auth');
 
+Route::get('/contato',function(){
+    return view('mails.contact');
+});
+
 Route::post('/projeto', [ProjectController::class, 'store'])->name('insert.project');
 
 //ADMIN
