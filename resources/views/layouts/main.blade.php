@@ -54,9 +54,16 @@
                         <div class="rd-navbar-nav-wrap">
                             <ul class="list-inline list-inline-md rd-navbar-corporate-list-social">
                                 <li><a class="icon fa fa-facebook" href="#"></a></li>
-                                <li><a class="icon fa fa-twitter" href="#"></a></li>
-                                <li><a class="icon fa fa-google-plus" href="#"></a></li>
                                 <li><a class="icon fa fa-instagram" href="https://www.instagram.com/nuarteip/" target="_blank"></a></li>
+                                @auth
+                                <li><a class="icon fa-solid fa-bell" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" href="#"></a>
+                                    @if (false)
+                                    <span class=" position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+                                        <span class="visually-hidden"></span>
+                                    </span>
+                                    @endif
+                                </li>
+                                @endauth
                             </ul>
                             <!-- RD Navbar Nav-->
                             <ul class="rd-navbar-nav">
@@ -96,6 +103,24 @@
     </div>
     @endif
 
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header" style="background-color: #162E44;">
+            <h5 class="offcanvas-title text-light" id="offcanvasDarkNavbarLabel">Notificações</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+                @if (false)
+
+                <li>dssd</li>
+
+                @else
+                    <li ><h6 class="">Não há notificações</h6></li>
+                @endif
+            </ul>
+        </div>
+    </div>
+    </div>
     @yield('content')
 
 
