@@ -10,7 +10,7 @@
         </div>
         <div class="col-9">
             <h1 class="text-bg-success mt-2">Artistas</h1>
-            <form action="{{route('insert.artist')}}" method="post">
+            <form action="{{route('insert.artist')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <label for="name" class="form-label">Nome</label>
                 <input type="text" name="name" id="name" class="form-control" placeholder="Digite nome do artista">

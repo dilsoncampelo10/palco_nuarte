@@ -14,13 +14,19 @@
         <div class="box-categories cta-box-wrap">
             <div class="box-categories-content">
                 <div class="row justify-content-center">
-                    <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
+                    @foreach ($artists as $artist)
+
+
+                    <div class="col-md-4 wow fadeInDown col-9 mb-5" data-wow-delay=".2s">
                         <ul class="list-marked-2 box-categories-list">
-                            <li><a href="#"><img src="{{asset('assets/images/artis1.jpg')}}" alt="" width="368" height="420" /></a>
+                            <li><a href="#"><img src="/assets/artists/photos/{{$artist->photo}}" alt="" width="368" height="420" /></a>
 
                             </li>
                         </ul>
                     </div>
+
+                    @endforeach
+                    <!-- 
                     <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                         <ul class="list-marked-2 box-categories-list">
                             <li><a href="#"><img src="{{asset('assets/images/artis2.jpg')}}" alt="" width="368" height="420" /></a>
@@ -37,8 +43,8 @@
                 </div>
             </div>
 
-            <!-- Owl Carousel-->
-        </div>
+            
+                </div>
 </section>
 
 
@@ -71,7 +77,7 @@
                 </div>
             </div>
 
-            <!-- Owl Carousel-->
+        
         </div>
 </section>
 
@@ -101,7 +107,7 @@
 
                             </li>
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 

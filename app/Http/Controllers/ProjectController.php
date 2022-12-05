@@ -14,7 +14,7 @@ class ProjectController extends Controller
     public function index()
     {
         $data = [
-            'categories' => Category::all()
+            'categories' => Category::all(),
         ];
         return view('project', $data);
     }

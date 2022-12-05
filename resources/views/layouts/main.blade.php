@@ -57,11 +57,11 @@
                                 <li><a class="icon fa fa-instagram" href="https://www.instagram.com/nuarteip/" target="_blank"></a></li>
                                 @auth
                                 <li><a class="icon fa-solid fa-bell" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" href="#"></a>
-                                    @if (false)
+
                                     <span class=" position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
                                         <span class="visually-hidden"></span>
                                     </span>
-                                    @endif
+
                                 </li>
                                 @endauth
                             </ul>
@@ -115,7 +115,9 @@
                 <li>dssd</li>
 
                 @else
-                    <li ><h6 class="">Não há notificações</h6></li>
+                <li>
+                    <h6 class="">Não há notificações</h6>
+                </li>
                 @endif
             </ul>
         </div>

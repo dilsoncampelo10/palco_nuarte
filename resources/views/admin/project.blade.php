@@ -41,7 +41,16 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            <pre>{{$project->description}}</pre>
+                            <div class="row">
+                                <div class="col-{{$project->file?'6':'12'}}">
+                                    <pre>{{$project->description}}</pre>
+                                </div>
+                                @if ($project->file)
+                                <div class="col-{{$project->description?'6':'12'}}">
+                                    <img src="/assets/projects/user/file/{{$project->file}}" alt="{{$project->title}}" class="img-fluid rounded-start">
+                                </div>
+                                @endif
+                            </div>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
