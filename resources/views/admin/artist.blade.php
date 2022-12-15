@@ -32,6 +32,32 @@
             </form>
         </div>
     </div>
+    <h2>Lista de artistas</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Função</th>
+                <th scope="col">Contato</th>
+                <th scope="col">Faz parte da equipe?</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($artists as $artist)
+            <tr>
+                <th scope="row">{{$artist->name}}</th>
+                <td>{{$artist->function}}</td>
+                <td>{{$artist->contact}}</td>
+                <td>@if($artist->isTeam) Sim @else Não @endif</td>
+                <td>
+                    <a href="">Excluir</a>
+                    <a href="">Editar</a>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
 
 @endsection

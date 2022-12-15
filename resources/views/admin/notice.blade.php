@@ -18,13 +18,37 @@
                 <textarea name="description" id="description" class="form-control" rows="4" placeholder="Digite descrição da notícia"></textarea>
                 <label for="link" class="form-label">Link</label>
                 <input type="text" name="link" id="link" class="form-control" placeholder="Insira link dessa notícia">
-                
+
                 <label for="photo" class="form-label">Foto ou banner</label>
                 <input type="file" name="image" id="image" class="form-control">
                 <input type="submit" class="btn btn btn-primary mt-2" value="Publicar">
             </form>
         </div>
     </div>
+    <h2>Lista de notícias</h2>
+    <table class="table table-striped">
+        <thead>  
+            <tr>
+                <th scope="col">Título</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">link</th>
+                <th scope="col">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($notices as $notice)
+            <tr>
+                <th scope="row">{{$notice->title}}</th>
+                <td>{{$notice->description}}</td>
+                <td>{{$notice->link}}</td>
+                <td>
+                    <a href="">Excluir</a>
+                    <a href="">Editar</a>
+                </td>
+            </tr>
+            @endforeach
+        </tbody>
+    </table>
 </div>
 
 @endsection

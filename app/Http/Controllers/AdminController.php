@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Artist;
+use App\Models\Galery;
+use App\Models\Notice;
 use App\Models\Project;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -28,7 +31,8 @@ class AdminController extends Controller
     {
         $loggedUser = User::find(Auth::user()->id);
         $data = [
-            'loggedUser' => $loggedUser
+            'loggedUser' => $loggedUser,
+            'notices' => Notice::all()
         ];
         return view('admin.notice', $data);
     }
@@ -36,7 +40,8 @@ class AdminController extends Controller
     {
         $loggedUser = User::find(Auth::user()->id);
         $data = [
-            'loggedUser' => $loggedUser
+            'loggedUser' => $loggedUser,
+            'artists' => Artist::all()
         ];
         return view('admin.artist', $data);
     }
@@ -44,7 +49,8 @@ class AdminController extends Controller
     {
         $loggedUser = User::find(Auth::user()->id);
         $data = [
-            'loggedUser' => $loggedUser
+            'loggedUser' => $loggedUser,
+            'galeries' => []
         ];
         return view('admin.gallery', $data);
     }
