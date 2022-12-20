@@ -23,7 +23,7 @@
         <thead>
             <tr>
                 <th scope="col">Imagem da galeria</th>
-                
+
                 <th scope="col">Ações</th>
             </tr>
         </thead>
@@ -34,8 +34,10 @@
                 <td>{{$galery->description}}</td>
                 <td>{{$galery->link}}</td>
                 <td>
-                    <a href="">Excluir</a>
-                    <a href="">Editar</a>
+                    <form action="{{route('delete.gallery')}}" method="post">
+                        <input type="submit" value="Excluir" class="btn">
+                    </form>
+                    <a href="{{route('edit.gallery')}}">Editar</a>
                 </td>
             </tr>
             @endforeach

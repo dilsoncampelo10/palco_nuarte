@@ -51,8 +51,12 @@
                 <td>{{$artist->contact}}</td>
                 <td>@if($artist->isTeam) Sim @else Não @endif</td>
                 <td>
-                    <a href="">Excluir</a>
-                    <a href="">Editar</a>
+                    <form action="/admin/artista/delete/{{$artist->id}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" value="Excluir" class="btn btn-danger d-inline-block" onclick="return confirm('Tem certeza que deseja excluir?')">
+                    </form>
+                    <a href="/admin/edit/{{$artist->id}}/artista" class="btn btn-info d-inline-block mt-2">Editar</a>
                 </td>
             </tr>
             @endforeach

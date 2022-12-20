@@ -33,7 +33,7 @@ Route::get('/projeto', [ProjectController::class, 'index'])->name('project')->mi
 
 Route::get('/contato', [ContactController::class, 'index'])->name('contact');
 
-Route::post('/contato',[ContactController::class,'store'])->name('send.email');
+Route::post('/contato', [ContactController::class, 'store'])->name('send.email');
 
 Route::post('/projeto', [ProjectController::class, 'store'])->name('insert.project');
 
@@ -47,7 +47,9 @@ Route::get('/admin/noticia', [AdminController::class, 'notice'])->name('admin.no
 Route::post('/admin/noticia', [NoticeController::class, 'store'])->name('insert.notice');
 
 Route::get('/admin/artista', [AdminController::class, 'artist'])->name('admin.artist')->middleware('admin');
+Route::get('/admin/edit/{id}/artista', [ArtistController::class, 'edit'])->name('edit.artist');
 Route::post('/admin/artista', [ArtistController::class, 'store'])->name('insert.artist');
+Route::delete('/admin/artista/delete/{id}', [ArtistController::class, 'destroy'])->name('delete.artist');
 
 Route::get('/admin/galeria', [AdminController::class, 'gallery'])->name('admin.gallery')->middleware('admin');
 

@@ -27,7 +27,7 @@
     </div>
     <h2>Lista de notícias</h2>
     <table class="table table-striped">
-        <thead>  
+        <thead>
             <tr>
                 <th scope="col">Título</th>
                 <th scope="col">Descrição</th>
@@ -42,8 +42,10 @@
                 <td>{{$notice->description}}</td>
                 <td>{{$notice->link}}</td>
                 <td>
-                    <a href="">Excluir</a>
-                    <a href="">Editar</a>
+                    <form action="{{route('delete.notice')}}" method="post">
+                        <input type="submit" value="Excluir" class="btn">
+                    </form>
+                    <a href="{{route('edit.notice')}}" class="btn btn-info">Editar</a>
                 </td>
             </tr>
             @endforeach

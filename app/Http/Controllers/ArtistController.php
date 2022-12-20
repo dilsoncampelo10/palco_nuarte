@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Artist;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ArtistController extends Controller
 {
@@ -54,5 +56,31 @@ class ArtistController extends Controller
 
 
         return redirect()->route('admin.artist')->with('danger', 'Não foi possível adicionar');
+    }
+
+    public function destroy($id)
+    {
+        if ($id) {
+            Artist::findOrFail($id)->delete();
+
+            return redirect()->route('admin.artist')->with('success', 'Artista deletado com sucesso');
+        }
+
+        return redirect()->route('admin.artist')->with('danger', 'Não foi possível deletar');
+    }
+
+    public function edit($id)
+    {
+
+
+        $artist = Artist::find($id);
+   
+        $loggedUser = User::find(Auth::user()->id);
+        $data = [
+            'artist' => $artist,
+            'loggedUser' => $loggedUser
+        ];
+
+        return view('admin.edit_artist', $data);
     }
 }
