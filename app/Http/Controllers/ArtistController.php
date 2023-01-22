@@ -88,6 +88,6 @@ class ArtistController extends Controller
         Artist::findOrFail($request->id)->update($request->all());
 
 
-        return redirect()->route('admin.artist')->with('sucess', 'Cliente alterado');
+        return redirect()->route('admin.artist')->with('sucess', 'Artista alterado');
     }
 }

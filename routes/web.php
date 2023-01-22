@@ -48,8 +48,9 @@ Route::post('/admin/categoria', [ProjectController::class, 'category'])->name('i
 //Notices
 Route::get('/admin/noticia', [AdminController::class, 'notice'])->name('admin.notice')->middleware('admin');
 Route::post('/admin/noticia', [NoticeController::class, 'store'])->name('insert.notice');
-Route::delete('/admin/deletar/{id}/noticias', [NoticeController::class, 'destroy'])->name('delete.notice');
+Route::delete('/admin/deletar/{id}/noticia', [NoticeController::class, 'destroy'])->name('delete.notice');
 Route::get('/admin/editar/{id}/noticia', [NoticeController::class, 'edit'])->name('edit.notice');
+Route::put('/admin/editar/{id}/noticia', [NoticeController::class, 'update'])->name('update.notice');
 
 //Artists
 Route::get('/admin/artista', [AdminController::class, 'artist'])->name('admin.artist')->middleware('admin');
