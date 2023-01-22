@@ -10,7 +10,7 @@
         </div>
         <div class="col-9">
             <h1 class="text-bg-danger mt-2">Notícias</h1>
-            <form action="{{route('insert.notice')}}" method="post">
+            <form action="{{route('insert.notice')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <label for="title" class="form-label">Título</label>
                 <input type="text" name="title" id="title" class="form-control" placeholder="Digite título da notícia">

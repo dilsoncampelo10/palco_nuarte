@@ -11,7 +11,13 @@ class NoticeController extends Controller
 {
     public function show()
     {
-        return view('notice');
+        $notices = Notice::orderBy('id', 'desc')->get();
+
+        $data = [
+            'notices' => $notices
+        ];
+
+        return view('notice', $data);
     }
 
     public function store(Request $request)
@@ -22,16 +28,29 @@ class NoticeController extends Controller
         $image = $request->image;
 
         if ($title && $description) {
+            if ($request->hasFile('image') && $request->file('image')->isValid()) {
+
+                $requestImage = $request->image;
+                $extension = $requestImage->extension();
+                $imageName = md5($requestImage->getClientOriginalName() . strtotime(now())) . "." . $extension;
+                $requestImage->move(public_path('assets/notices/'), $imageName);
+                $image = $imageName;
+            }
+
+            if (is_null($image)) {
+                $image = 'default.jpg';
+            }
+
             Notice::create(
                 [
                     'title' => $title,
                     'description' => $description,
                     'link' => $link,
-                    // 'image' => $image
+                    'image' => $image
                 ]
             );
 
-            return redirect()->route('admin.notice')->with('flash', 'Notícia publicada');
+            return redirect()->route('admin.notice')->with('success', 'Notícia publicada');
         }
 
         return redirect()->route('admin.notice')->with('danger', 'Não foi possiível publicar');
