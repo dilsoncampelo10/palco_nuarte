@@ -10,10 +10,10 @@
         </div>
         <div class="col-9">
             <h1 class="text-bg-primary mt-2">Galeria de imagens</h1>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{route('insert.gallery')}}" method="post" enctype="multipart/form-data">
                 @csrf
-                <label for="images">Selecione imagens para galeria</label>
-                <input type="file" name="images[]" id="images" class="form-control" multiple>
+                <label for="image">Selecione imagens para galeria</label>
+                <input type="file" name="image" id="image" class="form-control">
                 <input type="submit" value="Enviar" class="btn btn-primary mt-2">
             </form>
         </div>
@@ -24,20 +24,19 @@
             <tr>
                 <th scope="col">Imagem da galeria</th>
 
-                <th scope="col">Ações</th>
+                <th scope="col">Ação</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($galeries as $galery)
-            <tr>
-                <th scope="row">{{$galery->image}}</th>
-                <td>{{$galery->description}}</td>
-                <td>{{$galery->link}}</td>
+            @foreach ($galleries as $gallery)
+            <tr class="d-flex align-items-center justify-content-between">
+                <th scope="row"><img src="/assets/gallery/{{$gallery->image}}" alt="Imagem {{$gallery->id}}" style="width: 150px; position: relative;"></th>
                 <td>
-                    <form action="{{route('delete.gallery')}}" method="post">
-                        <input type="submit" value="Excluir" class="btn">
+                    <form action="{{route('delete.gallery',['id'=>$gallery->id])}}" method="post">
+                        @csrf
+                        @method('delete')
+                        <input type="submit" value="Excluir" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir?')">
                     </form>
-                    <a href="{{route('edit.gallery')}}">Editar</a>
                 </td>
             </tr>
             @endforeach

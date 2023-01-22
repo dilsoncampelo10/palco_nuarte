@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Artist;
 use App\Models\Galery;
+use App\Models\Gallery;
 use App\Models\Notice;
 use App\Models\Project;
 use App\Models\User;
@@ -23,7 +24,7 @@ class AdminController extends Controller
             'loggedUser' => $loggedUser,
             'project' => $projectCountPending
         ];
-       
+
         return view('admin.dashboard', $data);
     }
 
@@ -50,7 +51,7 @@ class AdminController extends Controller
         $loggedUser = User::find(Auth::user()->id);
         $data = [
             'loggedUser' => $loggedUser,
-            'galeries' => []
+            'galleries' => Gallery::all()
         ];
         return view('admin.gallery', $data);
     }

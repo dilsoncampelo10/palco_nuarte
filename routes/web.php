@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArtistController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NoticeController;
@@ -58,6 +59,9 @@ Route::post('/admin/artista', [ArtistController::class, 'store'])->name('insert.
 Route::delete('/admin/deletar/{id}/artista', [ArtistController::class, 'destroy'])->name('delete.artist');
 
 Route::get('/admin/galeria', [AdminController::class, 'gallery'])->name('admin.gallery')->middleware('admin');
+Route::post('/admin/galeria', [GalleryController::class, 'store'])->name('insert.gallery');
+Route::delete('/admin/deletar/{id}/galeria', [GalleryController::class, 'destroy'])->name('delete.gallery');
+
 
 Route::get('/admin/projeto', [AdminController::class, 'project'])->name('admin.project')->middleware('admin');
 
