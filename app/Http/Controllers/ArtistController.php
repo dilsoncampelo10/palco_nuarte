@@ -74,7 +74,7 @@ class ArtistController extends Controller
 
 
         $artist = Artist::find($id);
-   
+
         $loggedUser = User::find(Auth::user()->id);
         $data = [
             'artist' => $artist,
@@ -82,5 +82,12 @@ class ArtistController extends Controller
         ];
 
         return view('admin.edit_artist', $data);
+    }
+    public function update(Request $request)
+    {
+        Artist::findOrFail($request->id)->update($request->all());
+
+
+        return redirect()->route('admin.artist')->with('sucess', 'Cliente alterado');
     }
 }

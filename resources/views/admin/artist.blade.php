@@ -50,13 +50,13 @@
                 <td>{{$artist->function}}</td>
                 <td>{{$artist->contact}}</td>
                 <td>@if($artist->isTeam) Sim @else Não @endif</td>
-                <td>
-                    <form action="/admin/artista/delete/{{$artist->id}}" method="post">
+                <td class="d-flex">
+                    <form action="{{route('delete.artist',['id'=>$artist->id])}}" method="post">
                         @csrf
                         @method('DELETE')
-                        <input type="submit" value="Excluir" class="btn btn-danger d-inline-block" onclick="return confirm('Tem certeza que deseja excluir?')">
+                        <input type="submit" value="Excluir" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir?')">
                     </form>
-                    <a href="/admin/edit/{{$artist->id}}/artista" class="btn btn-info d-inline-block mt-2">Editar</a>
+                    <a href="{{route('edit.artist',['id'=>$artist->id])}}" class="btn btn-info ms-3">Editar</a>
                 </td>
             </tr>
             @endforeach

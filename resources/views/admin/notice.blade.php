@@ -41,11 +41,13 @@
                 <th scope="row">{{$notice->title}}</th>
                 <td>{{$notice->description}}</td>
                 <td>{{$notice->link}}</td>
-                <td>
-                    <form action="{{route('delete.notice')}}" method="post">
-                        <input type="submit" value="Excluir" class="btn">
+                <td class="d-flex">
+                    <form action="{{route('delete.notice',['id'=>$notice->id])}}" method="post">
+                        @csrf
+                        @method('delete')
+                        <input type="submit" value="Excluir" class="btn btn-danger" onclick="return confirm('Tem certeza que deseja excluir?')">
                     </form>
-                    <a href="{{route('edit.notice')}}" class="btn btn-info">Editar</a>
+                    <a href="{{route('edit.notice',['id'=>$notice->id])}}" class="btn btn-info ms-3">Editar</a>
                 </td>
             </tr>
             @endforeach

@@ -10,8 +10,10 @@
         </div>
         <div class="col-9">
             <h1 class="text-bg-success mt-2">Editar artista</h1>
-            <form action="{{route('insert.artist')}}" method="post" enctype="multipart/form-data">
+            <form action="{{route('update.artist')}}" method="post" enctype="multipart/form-data">
                 @csrf
+                @method('put')
+                <input type="hidden" name="id" value="{{$artist->id}}">
                 <label for="name" class="form-label">Nome</label>
                 <input type="text" name="name" id="name" class="form-control" placeholder="Digite nome do artista" value="{{$artist->name}}">
                 <label for="function" class="form-label">Função</label>
@@ -20,15 +22,15 @@
                 <input type="text" name="contact" id="contact" class="form-control" placeholder="Digite telefone ou e-mail" value="{{$artist->contact}}">
                 <div class="form-group">
                     <label class="form-label">Faz parte da equipe?</label>
-                    <input type="radio" name="team" id="yes" value="1" class="form-check-input">
+                    <input type="radio" name="team[]" id="yes" value="1" class="form-check-input">
                     <label for="yes">Sim</label>
-                    <input type="radio" name="team" id="no" value="0" class="form-check-input" checked>
+                    <input type="radio" name="team[]" id="no" value="0" class="form-check-input" checked>
                     <label for="no">Não</label>
 
                 </div>
                 <label for="photo" class="form-label">Foto ou banner</label>
                 <input type="file" name="photo" id="photo" class="form-control">
-                <input type="submit" class="btn btn btn-primary mt-2" value="Cadastrar">
+                <input type="submit" class="btn btn btn-primary mt-2" value="Editar">
             </form>
         </div>
     </div>

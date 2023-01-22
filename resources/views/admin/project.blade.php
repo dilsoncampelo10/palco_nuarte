@@ -6,6 +6,7 @@
         <div class="col-3">
             @include('components.sidebar')
         </div>
+        @if(count($pendingProjects)>0)
         <div class="col-9 d-flex justify-content-between" style="flex-wrap: wrap;">
             @foreach ($pendingProjects as $project)
             <div class="card mt-4" style="width: 45%;">
@@ -18,14 +19,14 @@
                     </button>
                     <form action="{{route('update.project',['id'=>$project->id])}}" style="display: inline;" method="POST">
                         @csrf
-                        @method('PUT')
+                        @method('put')
                         <button class="btn btn-success" type="submit" onclick="return confirm('Tem certeza que deseja aceitar esse projeto?')">
                             <i class="fa-solid fa-check"></i> Confirmar
                         </button>
                     </form>
                     <form action="{{route('delete.project',['id'=>$project->id])}}" style="display: inline;" method="POST">
                         @csrf
-                        @method('DELETE')
+                        @method('delete')
                         <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja recusar esse projeto?')">
                             <i class="fa-solid fa-ban"></i> Recusar
                         </button>
@@ -60,6 +61,9 @@
             </div>
             @endforeach
         </div>
+        @else
+        <h3 class="position-absolute mt-3" style="left: 30%;">Não há projetos pendentes</h3>
+        @endif
     </div>
 
 </div>

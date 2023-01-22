@@ -34,4 +34,15 @@ class NoticeController extends Controller
 
         return redirect()->route('admin.notice', 'Não foi possiível publicar');
     }
+
+    public function destroy($id)
+    {
+        if ($id) {
+            Notice::findOrFail($id)->delete();
+
+            return redirect()->route('admin.notice')->with('success', 'Notícia deletada com sucesso');
+        }
+
+        return redirect()->route('admin.notice')->with('danger', 'Não foi possível deletar');
+    }
 }

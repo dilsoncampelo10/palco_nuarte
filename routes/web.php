@@ -8,6 +8,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\NoticeController;
 use App\Http\Controllers\PoetryController;
 use App\Http\Controllers\ProjectController;
+use App\Models\Artist;
 use Illuminate\Support\Facades\Route;
 
 //Navigations
@@ -43,13 +44,18 @@ Route::get('/admin/dashboard', [AdminController::class, 'index'])->name('dashboa
 
 Route::post('/admin/categoria', [ProjectController::class, 'category'])->name('insert.category');
 
+//Notices
 Route::get('/admin/noticia', [AdminController::class, 'notice'])->name('admin.notice')->middleware('admin');
 Route::post('/admin/noticia', [NoticeController::class, 'store'])->name('insert.notice');
+Route::delete('/admin/deletar/{id}/noticias', [NoticeController::class, 'destroy'])->name('delete.notice');
+Route::get('/admin/editar/{id}/noticia', [NoticeController::class, 'edit'])->name('edit.notice');
 
+//Artists
 Route::get('/admin/artista', [AdminController::class, 'artist'])->name('admin.artist')->middleware('admin');
-Route::get('/admin/edit/{id}/artista', [ArtistController::class, 'edit'])->name('edit.artist');
+Route::get('/admin/editar/{id}/artista', [ArtistController::class, 'edit'])->name('edit.artist');
+Route::put('/admin/editar/artista', [ArtistController::class, 'update'])->name('update.artist');
 Route::post('/admin/artista', [ArtistController::class, 'store'])->name('insert.artist');
-Route::delete('/admin/artista/delete/{id}', [ArtistController::class, 'destroy'])->name('delete.artist');
+Route::delete('/admin/deletar/{id}/artista', [ArtistController::class, 'destroy'])->name('delete.artist');
 
 Route::get('/admin/galeria', [AdminController::class, 'gallery'])->name('admin.gallery')->middleware('admin');
 
