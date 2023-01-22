@@ -71,7 +71,7 @@
                                 </li>
                                 <li class="rd-nav-item {{ request ()-> routeIs ('notice') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('notice')}}">Notícias</a>
                                 </li>
-                                <li class="rd-nav-item {{request ()-> routeIs ('poetry') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('poetry')}}">Poesias</a>
+                                <li class="rd-nav-item {{request ()-> routeIs ('project') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('project')}}">Projetos publicados</a>
                                 </li>
                                 <li class="rd-nav-item {{request ()-> routeIs ('artist') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('artist')}}">Artistas</a>
                                 </li>
@@ -82,7 +82,7 @@
                                 </li>
                                 @endguest
                                 @auth
-                                <li class="rd-nav-item {{ request ()-> routeIs ('project') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('project')}}">Enviar projeto</a>
+                                <li class="rd-nav-item {{ request ()-> routeIs ('insert.project') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('insert.project')}}">Enviar projeto</a>
                                 </li>
                                 <li class="rd-nav-item"><a class="rd-nav-link" href="{{route('logout')}}">Sair</a>
                                 </li>

@@ -8,6 +8,6 @@ class PoetryController extends Controller
 {
     public function show()
     {
-        return view('poetry');
+        
     }
 }

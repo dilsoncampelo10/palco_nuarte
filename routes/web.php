@@ -17,7 +17,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/noticias', [NoticeController::class, 'show'])->name('notice');
 
-Route::get('/poesias', [PoetryController::class, 'show'])->name('poetry');
+Route::get('/projetos', [ProjectController::class, 'index'])->name('project');
 
 Route::get('/artistas', [ArtistController::class, 'show'])->name('artist');
 
@@ -31,13 +31,13 @@ Route::post('/cadastro', [LoginController::class, 'signup'])->name('signup');
 
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
-Route::get('/projeto', [ProjectController::class, 'index'])->name('project')->middleware('auth');
+Route::get('/enviar/projeto', [ProjectController::class, 'create'])->name('insert.project')->middleware('auth');
 
 Route::get('/contato', [ContactController::class, 'index'])->name('contact');
 
 Route::post('/contato', [ContactController::class, 'store'])->name('send.email');
 
-Route::post('/projeto', [ProjectController::class, 'store'])->name('insert.project');
+Route::post('/enviar/projeto', [ProjectController::class, 'store'])->name('create.project');
 
 //ADMIN
 

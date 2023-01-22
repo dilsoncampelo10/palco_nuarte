@@ -14,11 +14,18 @@ class ProjectController extends Controller
     public function index()
     {
         $data = [
-            'categories' => Category::all(),
+            'projects' => Project::orderBy('id', 'desc')->where('isPending', '=', 0)->get()
         ];
         return view('project', $data);
     }
 
+    public function create()
+    {
+        $data = [
+            'categories' => Category::all(),
+        ];
+        return view('insert_project', $data);
+    }
     public function store(Request $request)
     {
         $title = $request->title;
@@ -28,7 +35,7 @@ class ProjectController extends Controller
         $author = $request->author;
         $date = $request->date;
 
-        if (($category && $title && $description && $author) || ($file && $category && $author && $title)) {
+        if (($category && $title && $description) || ($file && $category && $author && $title)) {
 
 
             if ($request->hasFile('file') && $request->file('file')->isValid()) {
@@ -50,10 +57,10 @@ class ProjectController extends Controller
                 'file' => $file
             ]);
 
-            return redirect()->route('project')->with('flash', 'Projeto enviado! Aguarde sua aprovação...');
+            return redirect()->route('create.project')->with('flash', 'Projeto enviado! Aguarde sua aprovação...');
         }
 
-        return redirect()->route('project')->with('flash', 'Não foi possivel enviar seu projeto');
+        return redirect()->route('create.project')->with('flash', 'Não foi possivel enviar seu projeto');
     }
 
     public function category(Request $request)
