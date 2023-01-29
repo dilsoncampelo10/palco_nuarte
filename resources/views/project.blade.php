@@ -15,7 +15,7 @@
     </div>
 </section>
 </section>
-<!-- Base typography-->
+
 <section class="section section-sm section-first bg-default text-left">
     <div class="container">
         <ul class="list-xl box-typography">
