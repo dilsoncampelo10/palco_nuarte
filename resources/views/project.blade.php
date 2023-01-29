@@ -29,7 +29,7 @@
                 <div class="col-xl-7">
                     <li>
                         <h2 style="font-size: 2.5em; margin-bottom: 8px;">{{$project->title}}</h2>
-                        @if($project->id_category==2)
+                        @if($project->id_category==1)
                         <pre style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">
 
                         <p>{{$project->description}}</p>

@@ -45,9 +45,7 @@
                         <div class="d-flex justify-content-between">
                             <h5 class="card-title">Projetos pendentes</h5>
                             @if ($project >= 1)
-                            <!-- <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
-                                <span class="visually-hidden"></span>
-                            </span> -->
+  
 
                             @if ($project<=99) <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                 {{$project}}
