@@ -30,10 +30,10 @@
         </div>
 
     </div>
-    <!-- Swiper Pagination-->
+
     <div class="swiper-pagination"></div>
 </section>
-<!-- Section Box Categories-->
+
 <section class="section section-lg section-top-1 bg-gray-4">
     <div class="container offset-negative-1">
         <div class="box-categories cta-box-wrap">
@@ -337,55 +337,15 @@
         <h2 class="gallery-title" id="Galeria">Galeria</h2>
         <!--imagem-->
         <div class="owl-carousel owl-classic owl-dots-secondary" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4" data-xl-items="5" data-xxl-items="6" data-stage-padding="15" data-xxl-stage-padding="0" data-margin="30" data-autoplay="true" data-nav="true" data-dots="true">
-            <!-- galeria1-->
+            <!-- galeria-->
+            @foreach($galleries as $gallery)
             <article class="thumbnail thumbnail-mary">
-                <div class="thumbnail-mary-figure"><img src="{{asset('assets/images/galeria1.jpg')}}" alt="" width="270" height="195" />
+                <div class="thumbnail-mary-figure"><img src="/assets/gallery/{{$gallery->image}}" alt="" width="270" height="195" />
                 </div>
                 <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{{asset('assets/images/galeria01.jpg')}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-1-270x195.jpg')}}" alt="" width="270" height="195" /></a>
                 </div>
             </article>
-            <!-- galeria2-->
-            <article class="thumbnail thumbnail-mary">
-                <div class="thumbnail-mary-figure"><img src="{{asset('assets/images/galeria2.jpg')}}" alt="" width="270" height="195" />
-                </div>
-                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{{asset('assets/images/galeria02.jpg')}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-2-270x195.jpg')}}" alt="" width="270" height="195" /></a>
-                </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-                <div class="thumbnail-mary-figure"><img src="{{asset('assets/images/galeria3.jpg')}}" alt="" width="270" height="195" />
-                </div>
-                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{{asset('assets/images/galeria03.jpg')}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-3-270x195.jpg')}}" alt="" width="270" height="195" /></a>
-                </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-                <div class="thumbnail-mary-figure"><img src="{{asset('assets/images/galeria4.jpg')}}" alt="" width="270" height="195" />
-                </div>
-                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{{asset('assets/images/galeria04.jpg')}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-4-270x195.jpg')}}" alt="" width="270" height="195" /></a>
-                </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-                <div class="thumbnail-mary-figure"><img src="{{asset('assets/images/galeria5.jpg')}}" alt="" width="270" height="195" />
-                </div>
-                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{{asset('assets/images/galeria05.jpg')}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-5-270x195.jpg')}}" alt="" width="270" height="195" /></a>
-                </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-                <div class="thumbnail-mary-figure"><img src="{{asset('assets/images/galeria6.jpg')}}" alt="" width="270" height="195" />
-                </div>
-                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{{asset('assets/images/galeria06.jpg')}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-6-270x195.jpg')}}" alt="" width="270" height="195" /></a>
-                </div>
-            </article>
-            <!-- Thumbnail Classic-->
-            <article class="thumbnail thumbnail-mary">
-                <div class="thumbnail-mary-figure"><img src="{{asset('assets/images/galeria7.jpg')}}" alt="" width="270" height="195" />
-                </div>
-                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{{asset('assets/images/galeria07.jpg')}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-7-270x195.jpg')}}" alt="" width="270" height="195" /></a>
-                </div>
-            </article>
+            @endforeach
         </div>
     </div>
 </section>

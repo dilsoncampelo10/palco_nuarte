@@ -13,7 +13,7 @@
             <form action="{{route('insert.gallery')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <label for="image">Selecione imagens para galeria</label>
-                <input type="file" name="image" id="image" class="form-control">
+                <input type="file" name="image" id="image" class="form-control" required>
                 <input type="submit" value="Enviar" class="btn btn-primary mt-2">
             </form>
         </div>
