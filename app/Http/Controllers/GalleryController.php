@@ -28,7 +28,7 @@ class GalleryController extends Controller
             'image' => $image
         ]);
 
-        return redirect()->route('admin.gallery')->with('success', 'Image adicionada na galeria');
+        return redirect()->route('admin.gallery')->with('success', 'Imagem adicionada na galeria');
     }
 
 

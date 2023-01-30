@@ -38,11 +38,11 @@
 <body>
 
     <header class="section page-header">
-      
+
         <div class="rd-navbar-wrap">
             <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="106px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
                 <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-             
+
                 <div class="rd-navbar-main-outer">
                     <div class="rd-navbar-main">
                         <div class="rd-navbar-nav-wrap">
@@ -145,7 +145,7 @@
 
     </footer>
     </div>
-  
+
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>

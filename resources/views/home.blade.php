@@ -117,7 +117,7 @@
                         </div>
                         <div class="unit-body">
 
-                            <h5 class="box-icon-classic-title"><a href="#">Personalized Matching</a></h5>
+                            <h5 class="box-icon-classic-title"><a href="#">Cinema</a></h5>
                             <p class="box-icon-classic-text">Our unique matching system lets you find just the tour you want for your next holiday.</p>
                         </div>
                     </div>
@@ -126,9 +126,7 @@
             <div class="col-sm-6 col-lg-4">
                 <article class="box-icon-classic">
                     <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                        <div class="unit-left">
-                            <div class="box-icon-classic-icon fl-bigmug-line-circular220"></div>
-                        </div>
+
                         <div class="unit-body">
                             <h5 class="box-icon-classic-title"><a href="#">Fotografia</a></h5>
                             <p class="box-icon-classic-text">We offer a wide variety of personally picked tours with destinations all over the globe.</p>
@@ -139,11 +137,9 @@
             <div class="col-sm-6 col-lg-4">
                 <article class="box-icon-classic">
                     <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                        <div class="unit-left">
-                            <div class="box-icon-classic-icon fl-bigmug-line-favourites5"></div>
-                        </div>
+
                         <div class="unit-body">
-                            <h5 class="box-icon-classic-title"><a href="#">Highly Qualified Service</a></h5>
+                            <h5 class="box-icon-classic-title"><a href="#">Desenho</a></h5>
                             <p class="box-icon-classic-text">Our tour managers are qualified, skilled, and friendly to bring you the best service.</p>
                         </div>
                     </div>
@@ -152,11 +148,9 @@
             <div class="col-sm-6 col-lg-4">
                 <article class="box-icon-classic">
                     <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                        <div class="unit-left">
-                            <div class="box-icon-classic-icon fl-bigmug-line-headphones32"></div>
-                        </div>
+
                         <div class="unit-body">
-                            <h5 class="box-icon-classic-title"><a href="#">24/7 Support</a></h5>
+                            <h5 class="box-icon-classic-title"><a href="#">Ilustração digital</a></h5>
                             <p class="box-icon-classic-text">You can always get professional support from our staff 24/7 and ask any question you have.</p>
                         </div>
                     </div>
@@ -165,11 +159,9 @@
             <div class="col-sm-6 col-lg-4">
                 <article class="box-icon-classic">
                     <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                        <div class="unit-left">
-                            <div class="box-icon-classic-icon fl-bigmug-line-hot67"></div>
-                        </div>
+
                         <div class="unit-body">
-                            <h5 class="box-icon-classic-title"><a href="#">Handpicked Hotels</a></h5>
+                            <h5 class="box-icon-classic-title"><a href="#"> Música</a></h5>
                             <p class="box-icon-classic-text">Our team offers only the best selection of affordable and luxury hotels to our clients.</p>
                         </div>
                     </div>
@@ -178,11 +170,9 @@
             <div class="col-sm-6 col-lg-4">
                 <article class="box-icon-classic">
                     <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
-                        <div class="unit-left">
-                            <div class="box-icon-classic-icon fl-bigmug-line-wallet26"></div>
-                        </div>
+
                         <div class="unit-body">
-                            <h5 class="box-icon-classic-title"><a href="#">Best Price Guarantee</a></h5>
+                            <h5 class="box-icon-classic-title"><a href="#">Teatro</a></h5>
                             <p class="box-icon-classic-text">If you find tours that are cheaper than ours, we will compensate the difference.</p>
                         </div>
                     </div>
@@ -342,7 +332,7 @@
             <article class="thumbnail thumbnail-mary">
                 <div class="thumbnail-mary-figure"><img src="/assets/gallery/{{$gallery->image}}" alt="" width="270" height="195" />
                 </div>
-                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="{{asset('assets/images/galeria01.jpg')}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-1-270x195.jpg')}}" alt="" width="270" height="195" /></a>
+                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="/assets/gallery/{{$gallery->image}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-1-270x195.jpg')}}" alt="" width="270" height="195" /></a>
                 </div>
             </article>
             @endforeach
