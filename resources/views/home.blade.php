@@ -87,15 +87,15 @@
                         <div class="tab-content">
                             <div class="tab-pane fade show active" id="tabs-7-1">
                                 <p>O Núcleo de Arte do campus Ipanguaçu faz parte da política ampliada do IFRN que promover reunir e contribuir para o rumo artístico e cultural, além disso os alunos que integram na educação profissional e técnica, promove atividades que possa contribuir significativamente para a comunidade local. </p>
-                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
+                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="{{route('contact')}}">Entre em contato</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
                             </div>
                             <div class="tab-pane fade" id="tabs-7-2">
                                 <p>Um dos principais objetivos divulgar e estimular a interação e a cooperação entre a arte e o meio urbano e utilizar atividades que envolvam diferentes linguagens artísticas para promover, discutir e expandir as atividades artísticas e culturais.</p>
-                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
+                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="{{route('contact')}}">Entre em contato</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
                             </div>
                             <div class="tab-pane fade" id="tabs-7-3">
                                 <p>Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for every travel service available in the industry.</p>
-                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="contact-us.html">Get in Touch</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
+                                <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="{{route('contact')}}">Entre em contato</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
                             </div>
                         </div>
                     </div>
@@ -104,7 +104,7 @@
         </div>
     </div>
 </section>
-<!--	Our Services-->
+
 <section class="section section-sm">
     <div class="container">
         <h3>Formas Artisiticas</h3>
@@ -239,10 +239,11 @@
     <div class="container">
         <h3 class="title-block find-car oh"><span class="d-inline-block wow slideInUp">Equipe</span></h3>
         <div class="row row-30 justify-content-center box-ordered">
+            @foreach($artists as $artist)
             <div class="col-sm-6 col-md-5 col-lg-3">
                 <!-- Natalia-->
                 <article class="team-modern">
-                    <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="{{asset('assets/images/Natalia.jpg')}}" alt="" width="118" height="118" /></a>
+                    <div class="team-modern-header"><a class="team-modern-figure"><img class="img-circles" src="/assets/artists/photos/{{$artist->photo}}" alt="{{$artist->name}}" width="118" height="118" /></a>
                         <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
                             <g>
                                 <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
@@ -250,63 +251,16 @@
                         </svg>
                     </div>
                     <div class="team-modern-caption">
-                        <h6 class="team-modern-name"><a href="#">Nátalia Melo</a></h6>
-                        <p class="team-modern-status">Coodernadora</p>
-                        <h6 class="team-modern-phone"><a href="tel:#">Contato: 84 99801 - 0000</a></h6>
+                        <h6 class="team-modern-name"><a href="#">{{$artist->name}}</a></h6>
+                        <p class="team-modern-status">{{$artist->function}}</p>
+                        <h6 class="team-modern-phone"><a href="tel:#">Contato: {{$artist->contact}}</a></h6>
                     </div>
                 </article>
             </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-                <!-- Aja-->
-                <article class="team-modern">
-                    <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="{{asset('assets/images/Aja.jpg')}}" alt="" width="118" height="118" /></a>
-                        <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                            <g>
-                                <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="team-modern-caption">
-                        <h6 class="team-modern-name"><a href="#">Aja Góis</a></h6>
-                        <p class="team-modern-status">Coordenadora</p>
-                        <h6 class="team-modern-phone"><a href="tel:#">Contato: 84 99012 - 0000</a></h6>
-                    </div>
-                </article>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-               
-                <article class="team-modern">
-                    <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="images/user-3-118x118.jpg" alt="" width="118" height="118" /></a>
-                        <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                            <g>
-                                <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="team-modern-caption">
-                        <h6 class="team-modern-name"><a href="#">Bolsista 1</a></h6>
-                        <p class="team-modern-status">Tour Consultant</p>
-                        <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
-                    </div>
-                </article>
-            </div>
-            <div class="col-sm-6 col-md-5 col-lg-3">
-    
-                <article class="team-modern">
-                    <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="images/user-4-118x118.jpg" alt="" width="118" height="118" /></a>
-                        <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
-                            <g>
-                                <path fill="#161616" d="M202.085,0C193.477,28.912,166.708,50,135,50S76.523,28.912,67.915,0H0v70h270V0H202.085z"></path>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="team-modern-caption">
-                        <h6 class="team-modern-name"><a href="#">Michele info 3</a></h6>
-                        <p class="team-modern-status">PR Manager</p>
-                        <h6 class="team-modern-phone"><a href="tel:#">+1 323-913-4688</a></h6>
-                    </div>
-                </article>
-            </div>
+            @endforeach
+            
+          
+           
         </div>
     </div>
 </section>

@@ -11,7 +11,7 @@ class ArtistController extends Controller
 {
     public function show()
     {
-        $artists = Artist::orderBy('id', 'desc')->get();
+        $artists = Artist::orderBy('id', 'desc')->where('isTeam', '=', 0)->get();
 
         $data = [
             'artists' => $artists

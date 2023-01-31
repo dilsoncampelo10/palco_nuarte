@@ -28,19 +28,19 @@
             <div class="col-sm-8 col-md-6 col-lg-4">
                 <article class="box-contacts">
                     <div class="box-contacts-body">
-                        <div class="box-contacts-icon fl-bigmug-line-up104"></div>
+                        <i class="fa-solid fa-location-dot" style="font-size: 50px;"></i>
                         <div class="box-contacts-decor"></div>
-                        <p class="box-contacts-link"><a href="#">4730 Crystal Springs Dr, Los Angeles, CA 90027</a></p>
+                        <p class="box-contacts-link"><a href="#">IFRN - Campus Ipanguaçu</a></p>
                     </div>
                 </article>
             </div>
             <div class="col-sm-8 col-md-6 col-lg-4">
                 <article class="box-contacts">
                     <div class="box-contacts-body">
-                        <div class="box-contacts-icon fl-bigmug-line-chat55"></div>
+                        <i class="fa-solid fa-envelope" style="font-size: 50px;"></i>
                         <div class="box-contacts-decor"></div>
-                        <p class="box-contacts-link"><a href="mailto:#">mail@demolink.org</a></p>
-                        <p class="box-contacts-link"><a href="mailto:#">info@demolink.org</a></p>
+                        <p class="box-contacts-link"><a href="mailto:nuarteip.ifrn.edu.br">nuarteip.ifrn.edu.br</a></p>
+                        <!-- <p class="box-contacts-link"><a href="mailto:#">info@demolink.org</a></p> -->
                     </div>
                 </article>
             </div>
