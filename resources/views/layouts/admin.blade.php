@@ -38,14 +38,14 @@
         </div>
     </nav>
     @if(session('success'))
-    <div class="alert alert-success alert-dismissible fade show container mt-2" role="alert">
+    <div class="alert alert-success alert-dismissible fade show container mt-2" role="alert" id="success">
         {{session('success')}}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
     @endif
 
     @if(session('danger'))
-    <div class="alert alert-danger alert-dismissible fade show container mt-2" role="alert">
+    <div class="alert alert-danger alert-dismissible fade show container mt-2" role="alert" id="danger">
         {{session('danger')}}
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>

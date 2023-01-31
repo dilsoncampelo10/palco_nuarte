@@ -14,9 +14,14 @@
     <link rel="stylesheet" href="{{asset('assets/css/fonts.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <style>
-        body{
+        html {
+            height: 0;
+        }
+
+        body {
             background-color: #212121;
         }
+
         .ie-panel {
             display: none;
             background: #212121;
@@ -32,6 +37,32 @@
         html.lt-ie-10 .ie-panel {
             display: block;
         }
+
+        .banner {
+            background-image: url('assets/images/teste.png');
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            right: 0;
+            background-size: cover;
+        }
+
+        #danger,
+        #success {
+            color: #DC3545;
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 0;
+            width: 100%;
+            position: absolute;
+            left: 2%;
+            top: 0;
+            z-index: 5;
+        }
+
+        #success {
+            background-color: #157347;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -39,7 +70,22 @@
 
 <body>
 
+    @if(session('success'))
+    <div class="alert alert-success alert-dismissible fade show container mt-2" role="alert">
+        <strong> {{session('success')}}</strong>
+
+    </div>
+    @endif
+
+    @if(session('danger'))
+    <div class="alert alert-danger alert-dismissible fade show container mt-2" role="alert" id="danger">
+        <strong> {{session('danger')}} </strong>
+
+    </div>
+    @endif
+
     @yield('content')
+
 
 </body>
 

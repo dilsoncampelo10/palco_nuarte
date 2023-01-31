@@ -24,17 +24,22 @@ class LoginController extends Controller
         $name = $request->name;
         $email = $request->email;
         $password = $request->password;
+        $password2 = $request->password2;
 
         if ($name && $email && $password) {
+
+            if ($password != $password2) {
+                return redirect()->route('register')->with('danger', 'Senhas não conferem');
+            }
             User::create([
                 'name' => $name,
                 'email' => $email,
                 'password' => Hash::make($password)
             ]);
 
-            return redirect()->route('login')->with('flash', 'Cadastro realizado com sucesso!');
+            return redirect()->route('login')->with('success', 'Cadastro realizado com sucesso!');
         } else {
-            return redirect()->route('register')->with('flash', 'Não foi possível realizar cadastro');
+            return redirect()->route('register')->with('danger', 'Não foi possível realizar cadastro');
         }
     }
 
