@@ -118,7 +118,7 @@
                         <div class="unit-body">
 
                             <h5 class="box-icon-classic-title"><a href="#">Cinema</a></h5>
-                            <p class="box-icon-classic-text">Our unique matching system lets you find just the tour you want for your next holiday.</p>
+                            <p class="box-icon-classic-text">Com a sétima arte é possível acompanhar histórias incríveis e obter experiências que jamais vivemos.</p>
                         </div>
                     </div>
                 </article>
@@ -129,7 +129,7 @@
 
                         <div class="unit-body">
                             <h5 class="box-icon-classic-title"><a href="#">Fotografia</a></h5>
-                            <p class="box-icon-classic-text">We offer a wide variety of personally picked tours with destinations all over the globe.</p>
+                            <p class="box-icon-classic-text">Com a fotografia é possível reinventar imagens do nosso cotidiano.</p>
                         </div>
                     </div>
                 </article>
@@ -140,7 +140,7 @@
 
                         <div class="unit-body">
                             <h5 class="box-icon-classic-title"><a href="#">Desenho</a></h5>
-                            <p class="box-icon-classic-text">Our tour managers are qualified, skilled, and friendly to bring you the best service.</p>
+                            <p class="box-icon-classic-text">O desenho é uma forma manual de expressar nossos sentimentos rabiscando</p>
                         </div>
                     </div>
                 </article>
@@ -150,8 +150,8 @@
                     <div class="unit box-icon-classic-body flex-column flex-md-row text-md-left flex-lg-column text-lg-center flex-xl-row text-xl-left">
 
                         <div class="unit-body">
-                            <h5 class="box-icon-classic-title"><a href="#">Ilustração digital</a></h5>
-                            <p class="box-icon-classic-text">You can always get professional support from our staff 24/7 and ask any question you have.</p>
+                            <h5 class="box-icon-classic-title"><a href="#">Dança</a></h5>
+                            <p class="box-icon-classic-text">A movimentação do nosso corpo por meio do rítmo é o que expressa quem nós somos.</p>
                         </div>
                     </div>
                 </article>
@@ -162,7 +162,7 @@
 
                         <div class="unit-body">
                             <h5 class="box-icon-classic-title"><a href="#"> Música</a></h5>
-                            <p class="box-icon-classic-text">Our team offers only the best selection of affordable and luxury hotels to our clients.</p>
+                            <p class="box-icon-classic-text">Através da combinação de tons podemos criar uma melodia incrível.</p>
                         </div>
                     </div>
                 </article>
@@ -173,7 +173,7 @@
 
                         <div class="unit-body">
                             <h5 class="box-icon-classic-title"><a href="#">Teatro</a></h5>
-                            <p class="box-icon-classic-text">If you find tours that are cheaper than ours, we will compensate the difference.</p>
+                            <p class="box-icon-classic-text">Feliz ou triste? Por meio do teatro acopanhamos grande dramas ao vivo!</p>
                         </div>
                     </div>
                 </article>
@@ -181,13 +181,13 @@
         </div>
     </div>
 </section>
-<!-- Hot tours-->
+
 <section class="section section-sm bg-default">
     <div class="container">
         <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Notícias Recentes</span></h3>
         <div class="row row-sm row-40 row-md-50">
             <div class="col-sm-6 col-md-12 wow fadeInRight">
-                <!-- Product Big-->
+              
                 <article class="product-big">
                     <div class="unit flex-column flex-md-row align-items-md-stretch">
                         <div class="unit-left"><a class="product-big-figure" href="#"><img src="{{asset('assets/images/artistas1.jpg')}}" alt="" width="600" height="800" /></a></div>
@@ -207,7 +207,7 @@
                 </article>
             </div>
             <div class="col-sm-6 col-md-12 wow fadeInLeft">
-                <!-- Product Big-->
+               
                 <article class="product-big">
                     <div class="unit flex-column flex-md-row align-items-md-stretch">
                         <div class="unit-left"><a class="product-big-figure" href="#"><img src="{{asset('assets/images/artistas2.jpg')}}" }} alt="" width=" 600" height="366" /></a></div>
@@ -274,7 +274,7 @@
                 </article>
             </div>
             <div class="col-sm-6 col-md-5 col-lg-3">
-                <!-- Team Modern-->
+               
                 <article class="team-modern">
                     <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="images/user-3-118x118.jpg" alt="" width="118" height="118" /></a>
                         <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
@@ -291,7 +291,7 @@
                 </article>
             </div>
             <div class="col-sm-6 col-md-5 col-lg-3">
-                <!-- Team Modern-->
+    
                 <article class="team-modern">
                     <div class="team-modern-header"><a class="team-modern-figure" href="#"><img class="img-circles" src="images/user-4-118x118.jpg" alt="" width="118" height="118" /></a>
                         <svg x="0px" y="0px" width="270px" height="70px" viewbox="0 0 270 70" enable-background="new 0 0 270 70" xml:space="preserve">
