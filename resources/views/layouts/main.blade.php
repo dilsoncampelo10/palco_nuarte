@@ -47,7 +47,7 @@
                     <div class="rd-navbar-main">
                         <div class="rd-navbar-nav-wrap">
                             <ul class="list-inline list-inline-md rd-navbar-corporate-list-social">
-                                <li><a class="icon fa fa-facebook" href="#"></a></li>
+                                <li><a class="icon fa fa-envelope" href="mailto:nuarteip.ifrn.edu.br"></a></li>
                                 <li><a class="icon fa fa-instagram" href="https://www.instagram.com/nuarteip/" target="_blank"></a></li>
                             </ul>
                             <ul class="rd-navbar-nav">
@@ -120,12 +120,7 @@
                             <div class="wow slideInRight" data-wow-delay="0s">
                                 <h6 class="text-spacing-100 text-uppercase">Caso de Dúvida, entre em contato!</h6>
                                 <ul class="footer-contacts d-inline-block d-sm-block">
-                                    <li>
-                                        <div class="unit">
-                                            <div class="unit-left"><span class="icon fa fa-phone"></span></div>
-                                            <div class="unit-body"><a class="link-phone" href="tel:#">84 9999-99999</a></div>
-                                        </div>
-                                    </li>
+                                  
                                     <li>
                                         <div class="unit">
                                             <div class="unit-left"><span class="icon fa fa-envelope"></span></div>

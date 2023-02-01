@@ -83,7 +83,7 @@
                                 <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="{{route('contact')}}">Entre em contato</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
                             </div>
                             <div class="tab-pane fade" id="tabs-7-3">
-                                <p>Our mission is to provide the ultimate travel planning experience while becoming a one-stop shop for every travel service available in the industry.</p>
+                                <p>As atividades do nuarte implicam nas mais diversas formas de manifestações artisticas, se utilizando do espaço cultural bastante difundido pelo campus para realizar oficinas de teatro, música, artesanato, dando a liberdade de expressão a cada um</p>
                                 <div class="group-md group-middle"><a class="button button-secondary button-pipaluk" href="{{route('contact')}}">Entre em contato</a><a class="button button-black-outline button-md" href="about.html">Saiba Mais</a></div>
                             </div>
                         </div>
@@ -255,9 +255,10 @@
             <!-- galeria-->
             @foreach($galleries as $gallery)
             <article class="thumbnail thumbnail-mary">
+                
                 <div class="thumbnail-mary-figure"><img src="/assets/gallery/{{$gallery->image}}" alt="" width="270" height="195" />
                 </div>
-                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom60" href="/assets/gallery/{{$gallery->image}}" data-lightgallery="item"><img src="{{asset('assets/images/gallery-image-1-270x195.jpg')}}" alt="" width="270" height="195" /></a>
+                <div class="thumbnail-mary-caption"><a class="icon fl-bigmug-line-zoom70" href="/assets/gallery/{{$gallery->image}}" data-lightgallery="item"><img src="/assets/gallery/{{$gallery->image}}" alt="" width="270" height="195" /><i class="fa-solid fa-magnifying-glass-plus"></i></a>
                 </div>
             </article>
             @endforeach

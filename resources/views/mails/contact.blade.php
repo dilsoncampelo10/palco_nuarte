@@ -18,10 +18,9 @@
             <div class="col-sm-8 col-md-6 col-lg-4">
                 <article class="box-contacts">
                     <div class="box-contacts-body">
-                        <div class="box-contacts-icon fl-bigmug-line-cellphone55"></div>
+                        <i class="fa-brands fa-instagram" style="font-size: 50px;"></i>
                         <div class="box-contacts-decor"></div>
-                        <p class="box-contacts-link"><a href="tel:#">+1 323-913-4688</a></p>
-                        <p class="box-contacts-link"><a href="tel:#">+1 323-888-4554</a></p>
+                        <p class="box-contacts-link"><a href="https://www.instagram.com/nuarteip/" target="_blank">@nuarteip</a></p>
                     </div>
                 </article>
             </div>
@@ -30,7 +29,7 @@
                     <div class="box-contacts-body">
                         <i class="fa-solid fa-location-dot" style="font-size: 50px;"></i>
                         <div class="box-contacts-decor"></div>
-                        <p class="box-contacts-link"><a href="#">IFRN - Campus Ipanguaçu</a></p>
+                        <p class="box-contacts-link"><a href="https://portal.ifrn.edu.br/campus/ipanguacu" target="_blank">IFRN - Campus Ipanguaçu</a></p>
                     </div>
                 </article>
             </div>
