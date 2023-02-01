@@ -1,5 +1,5 @@
 @extends('layouts.main')
-@section('title','Poesias')
+@section('title','Projetos publicados')
 
 @section('content')
 <section class="breadcrumbs-custom-inset">

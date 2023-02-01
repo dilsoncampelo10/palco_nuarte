@@ -39,27 +39,16 @@
         <div class="box-categories cta-box-wrap">
             <div class="box-categories-content">
                 <div class="row justify-content-center">
+                    @for($i=0;$i<=2;$i++)
                     <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
                         <ul class="list-marked-2 box-categories-list">
-                            <li><a href="#"><img src="{{asset('assets/images/foto1.jpg')}}" alt="" width="368" height="420" /></a>
-                                <h5 class="box-categories-title">Secamed</h5>
+                            <li><a href="#"><img src="/assets/notices/{{$notices[$i]->image}}" alt="" width="368" height="420" /></a>
+                                <h5 class="box-categories-title" style="color: black;">{{$notices[$i]->title}}</h5>
                             </li>
                         </ul>
                     </div>
-                    <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
-                        <ul class="list-marked-2 box-categories-list">
-                            <li><a href="#"><img src="{{asset('assets/images/foto2.jpg')}}" alt="" width="368" height="420" /></a>
-                                <h5 class="box-categories-title">Mountain Holiday</h5>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-md-4 wow fadeInDown col-9" data-wow-delay=".2s">
-                        <ul class="list-marked-2 box-categories-list">
-                            <li><a href="#"><img src="{{asset('assets/images/foto3.jpg')}}" alt="" width="368" height="420" /></a>
-                                <h5 class="box-categories-title">Beach Holidays</h5>
-                            </li>
-                        </ul>
-                    </div>
+                    @endfor
+                    
                 </div>
             </div>
         </div><a class="link-classic wow fadeInUp" href="#Galeria">Outras Fotos<span></span></a>
@@ -186,18 +175,19 @@
     <div class="container">
         <h3 class="oh-desktop"><span class="d-inline-block wow slideInDown">Notícias Recentes</span></h3>
         <div class="row row-sm row-40 row-md-50">
+            @for($i=0;$i<=1;$i++)
             <div class="col-sm-6 col-md-12 wow fadeInRight">
               
                 <article class="product-big">
                     <div class="unit flex-column flex-md-row align-items-md-stretch">
-                        <div class="unit-left"><a class="product-big-figure" href="#"><img src="{{asset('assets/images/artistas1.jpg')}}" alt="" width="600" height="800" /></a></div>
+                        <div class="unit-left"><a class="product-big-figure" ><img src="/assets/notices/{{$recentNotices[$i]->image}}" alt="" width="600" height="800" /></a></div>
                         <div class="unit-body">
                             <div class="product-big-body">
-                                <h5 class="product-big-title"><a href="#">Roda de Conversa!</a></h5>
+                                <h5 class="product-big-title"><a>{{$recentNotices[$i]->title}}</a></h5>
                                 <div class="group-sm group-middle justify-content-start">
-                                    <div class="product-big-rating"></div><a class="product-big-reviews" href="#">Caros alunos e servidores do Campus Ipanguaçu 💖 @ifrn_ipan!! Venham participar do segundo evento CONVERSA ENTRE ARTISTAS!!!
-
-                                        Os nossos convidados dessa vez são os alunos do nosso IFRN-Campus Ipanguaçu e também artistas do Vale, Daniel Alves e Ricardo Melo. Vamos conversar e discutir variados assuntos. 🌹 O evento será na Sala de Música do Campus Ipanguaçu, AMANHÃ às 11:00 da manhã!!!!</a><a class="button button-black-outline button-ujarak" href="#">Acessar Notícia</a>
+                                    <div class="product-big-rating"></div><a class="product-big-reviews">
+                                    {{$recentNotices[$i]->description}}
+                                      </a><a class="button button-black-outline button-ujarak" href="{{route('notice')}}">Acessar Notícia</a>
                                 </div>
 
 
@@ -206,27 +196,8 @@
                     </div>
                 </article>
             </div>
-            <div class="col-sm-6 col-md-12 wow fadeInLeft">
-               
-                <article class="product-big">
-                    <div class="unit flex-column flex-md-row align-items-md-stretch">
-                        <div class="unit-left"><a class="product-big-figure" href="#"><img src="{{asset('assets/images/artistas2.jpg')}}" }} alt="" width=" 600" height="366" /></a></div>
-                        <div class="unit-body">
-                            <div class="product-big-body">
-                                <h5 class="product-big-title"><a href="#">Café, Cinema e Conversa</a></h5>
-                                <p class="product-big-text">CAFÉ, CINEMA E CONVERSA ☕🎥
-
-                                    O próximo café, cinema e conversa do mês de março já está agendado. Salvem o post e guardem a data!
-
-                                    Já compartilha esse evento único de troca mutua de sabedoria, aguardamos todos você para partilhar esse momento incrível!
-
-                                    A transmissão será neste link: https://www.youtube.com/watch?v=drBu0hzR50c</p><a class="button button-black-outline button-ujarak" href="#">Acessar Notícia</a>
-
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
+            @endfor
+            
         </div>
     </div>
 </section>
