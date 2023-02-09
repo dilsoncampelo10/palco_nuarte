@@ -90,7 +90,10 @@ class ProjectController extends Controller
 
         $project = Project::find($id);
 
-        unlink(public_path("assets/projects/user/file/" . $project->file));
+
+        if ($project->file) {
+            unlink(public_path("assets/projects/user/file/" . $project->file));
+        }
 
         Project::findOrFail($id)->delete();
 

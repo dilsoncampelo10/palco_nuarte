@@ -96,7 +96,7 @@
 
 <section class="section section-sm">
     <div class="container">
-        <h3>Formas Artisiticas</h3>
+        <h3>Formas Artísticas</h3>
         <div class="row row-30">
             <div class="col-sm-6 col-lg-4">
                 <article class="box-icon-classic">
