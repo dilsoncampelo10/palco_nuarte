@@ -59,6 +59,13 @@ class NoticeController extends Controller
     public function destroy($id)
     {
         if ($id) {
+
+            $notice = Notice::find($id);
+
+            if ($notice->image) {
+                unlink(public_path("assets/notices/" . $notice->image));
+            }
+
             Notice::findOrFail($id)->delete();
 
             return redirect()->route('admin.notice')->with('success', 'Notícia deletada com sucesso');

@@ -61,6 +61,12 @@ class ArtistController extends Controller
     public function destroy($id)
     {
         if ($id) {
+            $artist = Artist::find($id);
+
+            if ($artist->photo) {
+                unlink(public_path("assets/artists/photos/" . $artist->photo));
+            }
+
             Artist::findOrFail($id)->delete();
 
             return redirect()->route('admin.artist')->with('success', 'Artista deletado com sucesso');

@@ -37,6 +37,13 @@ class GalleryController extends Controller
     public function destroy($id)
     {
         if ($id) {
+
+            $gallery = Gallery::find($id);
+
+            if ($gallery->image) {
+                unlink(public_path("assets/gallery/" . $gallery->image));
+            }
+
             Gallery::findOrFail($id)->delete();
 
             return redirect()->route('admin.gallery')->with('success', 'Imagem deletada com sucesso');

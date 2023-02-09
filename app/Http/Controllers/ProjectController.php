@@ -82,7 +82,7 @@ class ProjectController extends Controller
     {
         DB::table('projects')->where('id', $id)->update(['isPending' => 0]);
 
-        return redirect()->route('admin.project')->with('flash', 'Projeto aceito com sucesso !');
+        return redirect()->route('admin.project')->with('success', 'Projeto aceito com sucesso !');
     }
 
     public function destroy($id)
@@ -97,6 +97,6 @@ class ProjectController extends Controller
 
         Project::findOrFail($id)->delete();
 
-        return redirect()->route('admin.project')->with('flash', 'Projeto recusado!');
+        return redirect()->route('admin.project')->with('success', 'Projeto recusado!');
     }
 }
