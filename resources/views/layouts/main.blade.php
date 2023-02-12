@@ -41,7 +41,7 @@
 
         <div class="rd-navbar-wrap">
             <nav class="rd-navbar rd-navbar-corporate" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="106px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-                <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+                <div class="rd-navbar-collapse-toggle rd-navbar-fixed-element-1" data-rd-navbar-toggle=".rd-navbar-collapse" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"><span></span></div>
 
                 <div class="rd-navbar-main-outer">
                     <div class="rd-navbar-main">
@@ -80,6 +80,43 @@
             </nav>
         </div>
     </header>
+    <!--Menu mobile -->
+    <nav class="navbar bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Palco Nuarte</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="rd-navbar-nav">
+                        <li class="rd-nav-item mb-3 {{ request ()-> routeIs ('home') ? 'active' : '' }} "><a class="rd-nav-link" href="{{route('home')}}">Palco Nuarte</a>
+                        </li>
+                        <li class="rd-nav-item mb-3 {{ request ()-> routeIs ('notice') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('notice')}}">Notícias</a>
+                        </li>
+                        <li class="rd-nav-item mb-3 {{request ()-> routeIs ('project') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('project')}}">Projetos publicados</a>
+                        </li>
+                        <li class="rd-nav-item mb-3 {{request ()-> routeIs ('artist') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('artist')}}">Artistas</a>
+                        </li>
+                        @guest
+                        <li class="rd-nav-item mb-3"><a class="rd-nav-link" href="{{route('login')}}">Login</a>
+                        </li>
+                        <li class="rd-nav-item mb-3"><a class="rd-nav-link" href="{{route('register')}}">Cadastre-se</a>
+                        </li>
+                        @endguest
+                        @auth
+                        <li class="rd-nav-item mb-3 {{ request ()-> routeIs ('insert.project') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('insert.project')}}">Enviar projeto</a>
+                        </li>
+                        <li class="rd-nav-item mb-3"><a class="rd-nav-link" href="{{route('logout')}}">Sair</a>
+                        </li>
+                        @endauth
+                        <li class="rd-nav-item mb-3 {{request ()-> routeIs ('contact') ? 'active' : '' }}"><a class="rd-nav-link" href="{{route('contact')}}">Fale conosco</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
     @if(session('flash'))
     <div class="alert alert-primary alert-dismissible fade show container" role="alert">
         {{session('flash')}}
@@ -120,7 +157,7 @@
                             <div class="wow slideInRight" data-wow-delay="0s">
                                 <h6 class="text-spacing-100 text-uppercase">Caso de Dúvida, entre em contato!</h6>
                                 <ul class="footer-contacts d-inline-block d-sm-block">
-                                  
+
                                     <li>
                                         <div class="unit">
                                             <div class="unit-left"><span class="icon fa fa-envelope"></span></div>
