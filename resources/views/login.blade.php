@@ -4,28 +4,21 @@
 
 @section('content')
 <div class="container">
-    <div style="background-color: white; width: 50%; position: absolute; left: 0; height: 100%;" class="text-center pb-4">
-        <h1>Login</h1>
-        <form class="rd-form rd-form-variant-2 rd-mailform" data-form-output="form-output-global" method="post" action="{{route('signin')}}">
+
+
+    <div class="px-3" id="login">
+        <h1 class="text-center">Login</h1>
+        <form action="{{route('signin')}}" method="post">
             @csrf
-            <div class="row row-14 gutters-14 d-flex justify-content-center">
-                <div class="col-md-7">
-                    <div class="form-wrap">
-                        <input class="form-input" id="email" type="email" name="email" placeholder="E-mail">
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="form-wrap">
-                        <input class="form-input" id="password" type="password" name="password" data-constraints="" placeholder="Senha">
-                    </div>
-                </div>
-            </div>
-            <div style="margin-left: 140px; margin-top: 30px; margin-bottom: 30px;">
+            <input type="email" class="form-input mt-3 mb-3" name="email" placeholder="Digite seu e-mail">
+            <input type="password" class="form-input mt-3 mb-3" name="password" placeholder="Digite sua senha">
+            <div style="margin-bottom: 30px;">
                 <button class="button button-primary button-pipaluk" type="submit">Fazer login</button>
             </div>
-            <a href="{{route('register')}}" style="margin-left: 140px;">Não possui conta? Cadastre-se</a>
+            <a href="{{route('register')}}">Não possui conta? Cadastre-se</a>
         </form>
     </div>
+
     <div class="banner">
 
     </div>

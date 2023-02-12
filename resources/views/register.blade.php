@@ -7,7 +7,7 @@
     <div class="banner" style="left: 0;">
 
     </div>
-    <div style="background-color: white; width: 50%; position: absolute; right: 0; height: 100%;" class="px-3">
+    <div class="px-3" id="register">
         <h1 class="text-center">Cadastro</h1>
         <form action="{{route('signup')}}" method="post">
             @csrf
